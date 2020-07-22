@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마블 시네마틱 유니버스</title>
+  <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+
+  <!-- MARVEL 부분 수정 -->
+  <center>
+  <div class="header">
+  <svg viewBox="0 0 3000 700">
+  <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="80%">M C U</text>
+  </symbol>
+  <g class = "g-ants">
+    <use xlink:href="#s-text" class="text-copy"></use>    <!--css에서 녹색 불러오기 -->
+    <use xlink:href="#s-text" class="text-copy"></use>    <!--css에서 노랑색 불러오기 -->
+    <use xlink:href="#s-text" class="text-copy"></use>    <!--css에서 흰색 불러오기 -->
+    <use xlink:href="#s-text" class="text-copy"></use>    <!--css에서 흰색 불러오기 -->
+    <use xlink:href="#s-text" class="text-copy"></use>    <!--css에서 빨간색 불러오기 -->
+  </g>
+</svg>
+  </div>
+</center>
+
+<!-- 메뉴 상단바 및 타겟 지정 -->
+  <ul><center>
+  <li><a href="word_wall.html" target="ifrm_content">홈</a></li>
+  <li><a href="movies.html" target="ifrm_content">상영작</a></li>
+  <li><a href="character.html" target="ifrm_content">캐릭터</a></li>
+  <li><a href="best.html" target="ifrm_content">명장면 & 명대사</a></li>
+  </li></center>
+  </ul>
+
+<!-- iframe 안에 들어갈 내용 및 html 지정 -->
+<iframe name="ifrm_content" src="word_wall.html" style="width: 100%; height: 60%;" scrolling="auto" align="center"></iframe>
+
+<!-- 바닥글 설정 -->
+  <div class="footer">
+    <p>COPYRIGHT BY CATHOLIC UNIVERSITY OF DAEGU.<br>COMPUTER ENGINEERING TERM PROJECT.</p>
+  </div>
+</body>
+</html>

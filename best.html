@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>명장면&명대사</title>
+	<style>
+
+      div {
+      width: 90%;                      /*TOP부분 위해서 빈공간 생성*/
+    }
+
+    div #text{
+      color: white;                    /*텍스트 색을 흰색으로 설정 */
+      width: 270px;                    /*너비 설정*/
+      height: 150px;                   /*높이 설정*/
+    }
+
+	  #movies div{
+      margin: 1px;                     /*타이틀 부분 div간의 외부 여백 1px*/
+      width: 90px; height: 25px;       /*너비 90px 높이 25px*/
+      border: 3px solid red;           /*테두리 굵기 (3px 실선 빨간색) 설정*/
+
+    }
+
+	  div div{
+      display: inline-block;           /*인라인 블록으로 설정*/
+			color: white;                    /*텍스트 색을 흰색으로 설정 */
+			width: 270px;                    /*너비 설정*/
+			height: 170px;                   /*높이 설정*/
+			
+		}
+
+		#top{                               /*id가 top인 부분의 스타일*/
+      cursor: pointer;                  /*top에서 마우스 포인터 변경*/           
+			text-align: center;               /*text를 중간 정렬*/
+			position: fixed;                  /*top을 페이지에 고정시킴*/
+			top: 30%;                         /*위에서 부터 아래로 30%의 부분에 위치 시킴*/
+			right: 10px;                      /*오른쪽에서 왼쪽으로 10px의 부분에 위치 시킴*/
+			width: 25px;                      /*너비 25px*/
+			height: 25px;                     /*높이 25px*/
+      font-size:15px;                   /*글자 크기 15px*/
+   		font-family: sans-serif;          /*폰트 설정*/
+    	padding: 5px;                     /*내부 여백 5px 설정*/
+   		margin-bottom: 7px;               /*top bottom에 외부 여백 7px 설정*/
+  		background-color: #a6a6a6;        /*배경색 #a6a6a6로 설정*/    
+		  color: #ffffff;                   /*색 #ffffff으로 설정*/
+    	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+      /*그림자 설정(오른쪽 그림자 지정)(아래쪽 그림자 지정)(수치만큼 그림자 흐려지는 정도)(글자 색 지정)*/
+    	border-radius: 50%;               /*테두리 원형으로 설정*/
+		}
+	#top:hover{                           /*top에 마우스를 올릴 경우*/
+      color:#E8330C;                    /*글자색 지정*/
+      background-color: white;          /*배경색 흰색 지정*/
+}
+		h2{                                 /*h2*/
+			 background-color: black;         /*배경색 검정색으로 지정*/
+   		 color: #ffffff;                 /*글자색 지정*/
+   		 text-align:center;              /*text 중간 정렬*/
+		}
+		
+		.footer {                           /*꼬리말*/
+  		background-color: #E8330C;        /*배경색 설정*/
+    	color: #ffffff;                   /*글자 색 설정*/
+    	text-align: center;               /*text 중간 정렬*/
+    	font-size: 12px;                  /*글자 크기 12px*/
+    	padding: 6px;                     /*내부 여백 6px*/
+  		}
+
+  		p{
+      font-size: 1.4em;                 /*글자 크기 1.4em*/
+      color: white;                     /*글자색을 흰색으로 설정*/
+      text-align: center;               /*text 중간 정렬*/
+}
+
+  /*for mobile phones: */
+  [class*="col-"]{width: 100%;};
+  
+
+  @media only screen and (min-width: 600px){
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+  }
+
+
+  @media only screen and (min-width: 768px){
+    /* For desktop */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+	</style>
+</head>
+<body id="first">         <!-- 페이지의 맨 위를 first로 지정하여 top을 이용해 위로 끌어올림 -->       
+
+<h2 style="color:red">명장면&명대사</h2>
+<center>                  <!-- 중앙 정렬 -->
+<div id="movies" class="col-6">
+  <div><a href="#어벤져스">
+    <img style="width:100%;" src="image/타이틀/어벤져스.png"></a></div>
+  <div><a href="#가디언즈 오브 갤럭시">
+    <img style="width:100%;" src="image/타이틀/가디언즈 오브 갤럭시.png"></a></div>
+  <div><a href="#블랙팬서">
+    <img style="width:100%;" src="image/타이틀/블랙팬서.png"></a></div>
+  <div><a href="#닥터스트레인지">
+    <img style="width:100%;" src="image/타이틀/닥터 스트레인지.png"></a></div>
+  <div><a href="#스파이더맨">
+    <img style="width:100%;" src="image/타이틀/스파이더맨.png"></a></div>
+  <div><a href="#앤트맨">
+    <img style="width:100%;" src="image/타이틀/앤트맨.png"></a></div>
+  <div><a href="#캡틴마블">
+    <img style="width:100%;" src="image/타이틀/캡틴 마블.png"></a></div>
+  <div><a href="#아이언맨">
+    <img style="width:100%;" src="image/타이틀/아이언맨.png"></a></div>
+  <div><a href="#토르">
+    <img style="width:100%;" src="image/타이틀/토르.png"></a></div>
+  <div><a href="#캡틴아메리카">
+    <img style="width:100%;" src="image/타이틀/캡틴 아메리카.png"></a></div>
+</div>                                                                              <!-- img를 이용해 div에 이미지를 넣고 그 이미지는 image폴더에서 가져온다  -->
+                                                                                    <!-- a 태그를 이용하여 div 부분을 클릭 시 위치로 이동한다 -->
+</center>
+
+
+<hr><center>                                                                        <!-- hr태그로 선을 나누어 준다 -->
+<p id="어벤져스">어벤져스</p>                                                         <!-- 영상을 크게 나누는 제목 / id를 설정 + 위의 a태그를 이용하여 해당 부분으로 온다 -->
+<div>
+	<div class="col-6">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/CgOoj4MRCho?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video"> -->                        <!-- 반응형 웹페이지 설정 (class col-6으로 pc의 웹페이지로 열었을 경우 너비를 50%로 설정) -->
+    <!-- <source src="video/명장면,명대사/어벤져스/아이언맨 MK7.mp4" type="video/mp4"> -->        <!-- 비디오 영상을 해당 경로에서 가져온다 타입은 동영상/mp4로 설정 -->
+    </video>
+    
+  </div>
+
+  <br>                                                                               <!-- 줄바꿈 -->
+  <div id="text" align="center"><b>▲어벤져스 : 아이언맨 MK7</b><br><br/>토니스타크는 언제 어디서든 입을 수 있는 슈트를 개발하는 과정에서 들고다니는 것이 아닌 슈트차체가 날아와서 입을 수 있도록 하는 방식을 채택하는데 그 과정에서 처음으로 탄생된 슈트</div><br>      <!-- 영상 밑에 제목과 내용을 작성 / 중간 정렬 -->
+</div>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/QZcN95j7Ky4?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/어벤져스/어벤져스 원년멤버.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br> 
+  <div id="text" align="center"><b>▲어벤져스 : 원년멤버</b><br><br/>보통 히어로라면 자신의 모습을 숨기고 들러내지 않는 클리셰를 깨버린 장면이다. 후에 이 장면이 토니 스타크의 애드립이였다는 것을 말하면서 더욱 관심을 받았다.     
+</div>
+</div>
+<br/>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/IGfv8k_yOTA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/어벤져스/어벤져스 헐크 vs 로키.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲어벤져스 : 헐크 vs 로키</b><br><br/>어벤져스의 킬링 포인트라고도 불리는 장면으로 빌런인 로키에게 더욱 매력을 느끼게 만드는 부분이다.     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/DAoDyVqXlxQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/어벤져스2/어벤져스 오프닝 전투씬.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲어벤져스 에이지 오브 울트론 : <br/>오프닝 전투</b><br><br/>영화의 첫 시작으로 어번져스의 팀워크를 보여주는 장면이다     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/wV4XhON1ZLg?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/어벤져스2/어벤져스 울트론 최후 전투.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲어벤져스 에이지 오브 울트론 : <br/>소코비아 전투</b><br><br/>적에서 같은 팀이 된 퀵실버와 스칼렛 위치, 그리고 마인드 스톤에 의해 태어난 비젼과 어번져스가 한 팀이 되어 울트론 군대과 맞서는 장면이다.      
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/JkjO863sywA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/어벤져스2/어벤져스2 아이언맨 vs 헐크.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲어벤져스 에이지 오브 울트론 : <br/>헐크 버스터 vs 헐크</b><br><br/>헐크가 폭주할 것을 염려하여 아이언맨이 만들어둔 헐크버스터라는 슈트를 선보이고 헐크와 아이언맨의 액션을 볼 수 있는 장면이다.      
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/HXxyjNskQmE?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/어벤져스3/어벤져스 bring me thanos.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲어벤져스 인피니티 워 : <br/>bring me thanos</b><br><br/>묠니르가 사라진 토르가 스톰 브레이크라는 새로운 무기를 가지고 최종 전투장소에 나타나 타노스를 찾는 장면     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/DcmLUDKrtYY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/어벤져스3/어벤져스3 아이언맨vs타노스.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲어벤져스 인피니티 워 : <br/>아이언맨 vs 타노스</b><br><br/>원작에서 등장했던 나노 슈트의 모습과 처음 등장하는 다양한 무기들을 확인할 수 있는 장면이다.       
+</div>
+</div>
+
+<hr>
+<p id="가디언즈 오브 갤럭시">가디언즈 오브 갤럭시</p>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/8Rxb0PkuPsc?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/가오갤1/가오갤 we are groot.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲가.오.갤 : we are groot</b><br><br/>오로지 " I'm Groot "만 말 할 수 있는 그루트가 가디언즈 오브 갤럭시 멤버들을 목숨을 걸고 지키면서 처음이자 마지막으로 한 대사이다.      
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/U0PKB49ffXk?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/가오갤1/가오갤 스타로드 댄스배틀.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲가.오.갤 : 스타로드 댄스배틀</b><br><br/>파워스톤을 가진 로난의 시선을 끌기위해 뜬금없이 로난에게 댄스배틀을 신청하는데 그 때 로난의 표정과 가모라의 표정은 위기의 순간에 뜬금없는 웃음을 주어 가오갤의 유머를 완성시켰다.
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/mpc4uDef-Ss?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/가오갤2/가오갤 베이비 그루트 댄스.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲가.오.갤 : 베이비 그루트 댄스</b><br><br/>가디언즈 오브 갤럭시 vol.2의 처음을 여는 장면으로 가오갤 멤버들이 괴물들에게 두들겨 맞는 와중에 아기 그루트는 신나는 음악에 맞추어 귀여운 춤을 추는 장면을 보여준다. Vol.1에 이어 영화의 캐릭터성을 보여주는 장면        
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/rDOGCW9bTyI?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/가오갤2/가오갤 스타로드 vs 이고.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲가.오.갤 : 스타로드 vs 에고</b><br><br/>스타로드의 친아버지인 에고는 사실 세계를 지배하려고 하는 자인 것을 알고 에고에 대항하는 스타로드의 전투를 보여주는 장면이다.      
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/WfunaM35CYk?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/가오갤2/가오갤 욘두의 죽음.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲가.오.갤 : 욘두의 죽음</b><br><br/>vol.1에서 스타로드의 적인줄 알았던 욘두가 사실은 누구보다 스타로드를 아꼈던 사람이고 진정한 아버지의 모습을 보여준 감동적인 장면이다.     
+</div>
+</div>
+
+<hr>
+<p id="블랙팬서">블랙팬서</p>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/EZT9W8enRXY?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/블랙팬서/블랙팬서 티찰라 vs 킬몽거.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲블랙팬서 : 티찰라 vs 킬몽거</b><br><br/>진정한 블랙팬서를 가리는 마지막 전투 장면이다.     
+</div>
+</div>
+
+<hr>
+<p id="닥터스트레인지">닥터 스트레인지</p>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/KQ_RRcRfS4A?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/닥터스트레인지/닥터스트레인지 여행.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲닥터 스트레인지 : <br/>에이션트 원과 첫만남</b><br><br/>처음으로 MCU 세계관에 마법을 보여주는 장면     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/cTf8LQ8l6jM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/닥터스트레인지/닥터스트레인지 도르마무 거래.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲닥터 스트레인지 : 도르마무 거래</b><br><br/>인티니티 스톤 중 하나인 타임스톤을 담고 있는 아가모토의 눈으로 악의 군주 도르마무를 물러내기 위해 계속해서 시간을 되돌린다. 이 장면이 이 영화의 킬링포인트!     
+</div>
+</div>
+
+<hr>
+<p id="스파이더맨">스파이더맨</p>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Irw0VQKPxZo?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/스파이더맨/스파이더맨 보트씬.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲스파이더맨 홈커밍 : 보트씬</b><br><br/>SONY에서 만들었던 스파이더맨에서 지하철 추락을 막는 스파이더맨을 오마주한 장면이다.     
+</div>
+</div>
+
+<hr>
+<p id="앤트맨">앤트맨</p>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/y-CHRkPFwlI?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/앤트맨1/앤트맨 토마스기차.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲앤트맨 : 앤트맨 vs 옐로우 제킷</b><br><br/>몸의 크기를 자유자재로 컨트롤 할 수 있는 두 명이 작아진 상태에서 스콧 랭의 딸인 캐시 랭의 장난감 기차에 치이면서 놀라지만 반전의 웃음을 주는 장면이다.      
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/iTvFnwgGybU?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/앤트맨2/앤트맨 와스프 첫전투씬.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲앤트맨과 와스프< : 앤트맨 와스프 첫 전투씬</b><br><br/>새로운 여성 캐릭터 와스프의 전투를 볼 수 있는 장면으로 앤트맨과는 다른 날개가 달리면서 더욱 더 화려한 액션씬을 볼 수 있게 되었다.      
+</div>
+</div>
+
+<hr>
+<p id="아이언맨">아이언맨</p>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/xe4t-tDPn_c?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/아이언맨1/아이언맨 MK3.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲아이언맨 : MK3</b><br><br/>우리들이 흔히 알고있는 아이언맨 슈트의 모습이 처음 보여진 장면     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VUiH8GdP8FA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/아이언맨1/아이언맨 아임 아이언맨.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲아이언맨 : I'm Ironman</b><br><br/>보통 히어로라면 자신의 모습을 숨기고 들러내지 않는 클리셰를 깨버린 장면이다. 후에 이 장면이 토니 스타크의 애드립이였다는 것을 말하면서 더욱 관심을 받았다.      
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/0fl5zARBRPo?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/아이언맨2/아이언맨 MK5.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲아이언맨 2 : MK5</b><br><br/>언제 어디서나 입을 수 있는 슈트를 고민하던 토니 스타크가 처음으로 시도한 휴대용 슈트. 휴대용인만큼 공격력이나 방어력에서 약한 부분이 드러났다.      
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/i_RPX49v5uI?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/아이언맨2/아이언맨 비행기씬.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲아이언맨 3 : 비행기 구출씬</b><br><br/>하늘을 나는 비행기에서 떨어지는 모든 사람들을 구출하는 장면이다. 그리고 처음으로 토니 스타크가 직접 입지 않고 조종하는 슈트여서 더욱 주목받았다.      
+</div>
+</div>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/kyR9QwwOLCQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/아이언맨3/아이언맨 MK42.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲아이언맨 3 : MK42</b><br><br/>아이언맨2에서 휴대용 슈트를 처음으로 선보인 토니 스타크가 이번에는 자신의 몸에 칩을 심어 슈트가 직접 날아오도록 개발한 슈트     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/Y0W8NQ1vn9Y?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/아이언맨3/아이언맨 하우스 파티 프로토콜.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲아이언맨 3 : 하우스 파티 프로토콜</b><br><br/>슈트에 강박 관념에 사로잡힌 아이언맨이 지금까지 만들었던 모든 슈트들 출동시키는 장면으로 다양한 능력의 슈트를 볼 수 있는 장면으로 "하우스 파티 프로토콜" 이라고 부른다.      
+</div>
+</div>
+
+<hr>
+<p id="토르">토르</p>
+
+<div>
+  <div class="col-6">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/OKt7dbDDI5k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/토르 다크월드/토르 로키 오딘 변신.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲토르 다크월드 : 로키의 변신</b><br><br/>죽은 줄 알았던 로키가 오딘의 모습으로 변한 상태에서 왕좌에서 물러나는 토르를 보며 다시 로키의 본모습으로 돌아오며 웃는 장면이다. 아이러니하게 빌런이 죽었다가 살아났는데 너무 매력적이라 많은 관객들이 좋아했다.        
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/EGPLduup0tU?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/토르 라그나로크/토르 헐크 토르 패대기.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲토르 라그나로크 : 헐크 vs 토르</b><br><br/>어벤져스에서의 헐크가 로키를 패대기 치는 장면을 오마주한 장면이다. 패대기 쳐지는 토르를 보며 로키가 "내가 저 마음이야!"라고 하는 장면은 웃음을 유발한다.     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/8KRqAYHByNQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/토르 라그나로크/토르 각성.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲토르 라그나로크 : 토르 각성</b><br><br/>MCU에서 가장 음악과 어울리는 장면이라고 이야기되는 장면이다. 토르의 각성과 함께 처음으로 묠니르가 없는 진전한 천둥의 신 토르를 볼 수 있는 장면이다.      
+</div>
+</div>
+
+<hr>
+<p id="캡틴아메리카">캡틴아메리카</p>
+
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/8_yoAOghtII?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/캡틴 퍼스트 어벤져/캡틴 i can do this all day.mp4" type="video/mp4"> -->
+    </video>
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲캡틴 퍼스트 어벤져 : <br/>i can do this all day</b><br><br/>캡틴을 상징하는 대사로 "하루종일 할 수 있어"란 의미를 가지고 있다. 힘들거나 자신의 마음을 다시 한 번 다질 때 이 대사를 말한다.     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/8RYrJtSSNr0?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/캡틴 윈터솔져/캡틴 엘리테이터씬.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲캡틴 윈터솔져 : 엘리테이터씬</b><br><br/>좁은 공간에서 여러명의 하이드라 잔당과 싸우는 캡틴의 액션씬. 윈터 솔져와의 전투씬처럼 굉장히 높은 평가를 받고 있는 액션씬이다.      
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/K0vVpC_tFyI?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/캡틴 윈터솔져/캡틴 캡틴 vs 윈터솔져.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲캡틴 윈터솔져 : 캡틴 vs 윈터솔져</b><br><br/>역대급 액션씬으로 MCU 전체의 액션씬 중에서도 굉장히 퀄리티가 높은 액션으로 평가받고 있다. 그리고 이 과정에서 윈터솔져가 자신의 베프인 버키임을 알게 된다.     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/lMCOWRCR6I0?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/캡틴 시빌워/캡틴 아이언맨 vs 캡틴 공항씬.mp4" type="video/mp4">
+    </video> -->
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲캡틴 시빌워 : <br/>아이언맨 vs 캡틴 공항씬</b><br/><br>아이언맨과 캡틴 두 사람의 의견대립으로 시작한 싸움이 두 진영으로 나누어지는 사태까지 가면서 서로가 서로를 막으면서 치뤄진 히어로들 끼리의 전투 장면이다.     
+</div>
+</div>
+
+<br/>
+<div>
+  <div class="col-6">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/fSt2vj8PLwk?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <video width="100%" controls id="video">
+    <source src="video/명장면,명대사/캡틴 시빌워/캡틴아메리카 시빌워 아이언맨 VS 캡틴.mp4" type="video/mp4"> -->
+    </video>
+  </div>
+
+  <br>
+  <div id="text" align="center"><b>▲캡틴 시빌워 : <br/>아이언맨 vs 캡틴, 윈터솔져</b><br/><br>원작에서도 유명한 장면으로 캡틴과 아이언맨의 감정의 골이 깊어지면서 대립하는 두 영웅의 액션 장면이다. 특히 마지막의 아이언맨의 리퍼서 빔을 캡틴이 막는 장면은 원작의 커버로도 나왔던 장면으로 유명하다.   
+</div>
+</div>
+
+</center>
+
+
+<div id="top"><a href="#first"><img src="image/scroll/scroll_up.jpg" style="width: 100%; height: 100%" /></a></div>              <!-- 맨위로 이동하는 부분을 만들어 긴 글에서 보다 쉽게 맨 위로 올라온다 -->
+              <!-- 이미지는 해당 경로에서 가져온다 / first로 이동할 수 있는 a태그 -->
+</body>
+</html>
