@@ -1,0 +1,91 @@
+body{
+  color:#ffffff;              /*글자색 #ffffff으로 설정*/
+  background-color: black;    /*배경색 검정색으로 설정*/
+}
+div {
+  background-color: black;    /*배경색 검정색으로 설정*/
+  width: 90%;                 /*TOP부분 위해서 빈공간 생성*/
+}
+div div{
+  display: inline-block;             /*인라인 블록으로 설정*/
+  background-color: white;           /*배경 설정*/
+  text-align: center;                /*중앙 정렬*/
+  position: relative;                /*상대적 위치 설정*/
+  margin: 10px;                      /*외부 여백 10px*/
+  width: 80px; height: 129.440px;    /*너비 높이 설정*/
+}
+
+#top{                               /*id가 top인 부분의 스타일*/
+  cursor: pointer;                  /*top에서 마우스 포인터 변경*/           
+  text-align: center;               /*text를 중간 정렬*/
+  position: fixed;                  /*top을 페이지에 고정시킴*/
+  top: 30%;                         /*위에서 부터 아래로 30%의 부분에 위치 시킴*/
+  right: 10px;                      /*오른쪽에서 왼쪽으로 10px의 부분에 위치 시킴*/
+  width: 25px;                      /*너비 25px*/
+  height: 25px;                     /*높이 25px*/
+  font-size:15px;                   /*글자 크기 15px*/
+  font-family: sans-serif;          /*폰트 설정*/
+  padding: 5px;                     /*내부 여백 5px 설정*/
+  margin-bottom: 7px;               /*top bottom에 외부 여백 7px 설정*/
+  background-color: #a6a6a6;        /*배경색 #a6a6a6로 설정*/    
+  color: #ffffff;                   /*색 #ffffff으로 설정*/
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+  /*그림자 설정(오른쪽 그림자 지정)(아래쪽 그림자 지정)(수치만큼 그림자 흐려지는 정도)(글자 색 지정)*/
+  border-radius: 50%;               /*테두리 원형으로 설정*/
+    }
+  #top:hover{                       /*top에 마우스를 올릴 경우*/
+  color:#E8330C;                    /*글자색 지정*/
+  background-color: white;          /*배경색 흰색 지정*/
+}
+
+h2{                                 /*h2*/
+  background-color: black;          /*배경색 검정색으로 지정*/
+  color: #ffffff;
+  text-align:center;                /*text 중간 정렬*/
+    }
+#phase{
+  font-size: 1.5em;                 /*폰트 크기 1.5em 설정*/
+  font-weight: bold;                /*글자 굵게*/
+  background-color: black;          /*배경색 검정으로 설정*/
+  color: #ffffff;                   /*글자색 설정*/
+  padding: 5px;                     /*내부 여백 5px*/                         
+}
+p{
+  color: #ffffff;                   /*글자색 설정*/
+}
+  /*for mobile phones: */
+  [class*="col-"]{width: 100%;};
+  
+
+  @media only screen and (min-width: 600px){
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+  }
+
+
+  @media only screen and (min-width: 768px){
+    /* For desktop */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }

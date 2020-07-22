@@ -1,0 +1,160 @@
+/*밑에 box-이부분은 주석이 없어도 큰차이를 못느껴서 둡니다. 필요없으면 지우라고 하시면 제가 지울께요*/
+/**{ box-sizing: border-box; }*/
+
+[class*="col-"]{
+  float: left;
+  padding: 15px;
+}
+
+
+html{
+  font-family: "Lucida Sans", sans-serif;   /*글자 Lucida Sans으로 통일*/
+}
+
+.header{
+  color: #ffffff;           /*글자색 지정*/
+  padding: 15px;            /*내부 여백 15px*/
+  text-align:center;        /*가운데 정렬*/
+  background-color: black;  /*배경색(검정) 지정*/
+}
+
+.footer {
+  background-color: #E8330C;        /*배경색(다크 오렌지) 지정*/
+  color: #ffffff;                   /*글자색 지정*/
+  text-align: center;               /*글자 가운데 정렬*/
+  font-size: 12px;                  /*글자 크기 지정*/
+  padding: 6px;                     /*내부 여백 6px*/
+}
+
+
+  /*for mobile phones: */
+[class*="col-"]{width: 100%;};
+
+@media only screen and (min-width: 600px){
+  /* For tablets: */
+  .col-m-1 {width: 8.33%;}
+  .col-m-2 {width: 16.66%;}
+  .col-m-3 {width: 25%;}
+  .col-m-4 {width: 33.33%;}
+  .col-m-5 {width: 41.66%;}
+  .col-m-6 {width: 50%;}
+  .col-m-7 {width: 58.33%;}
+  .col-m-8 {width: 66.66%;}
+  .col-m-9 {width: 75%;}
+  .col-m-10 {width: 83.33%;}
+  .col-m-11 {width: 91.66%;}
+  .col-m-12 {width: 100%;}
+}
+
+
+@media only screen and (min-width: 768px){
+  /* For desktop */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+
+
+
+
+/*=======================================================================================*/
+/*MCU 부분*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+  background-color: black;
+}
+
+
+
+svg {
+    display: inline-block;    /*인라인 블록으로 설정*/
+    font: 35em 'Montserrat';  /*폰트와 글자 크기 지정*/
+    width: 100%;              /*너비 지정*/
+    max-height: 200px;        /*최대 높이 지정*/
+    height: 200%;             /*높이 지정*/
+    float: center;            /*가운데로 효과 나타나게 설정*/
+    background-color: black;  /*배경색(검정색) 지정*/
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+    float: center;
+}
+
+.text-copy:nth-child(1){      /*녹색*/
+  stroke: #26FF00;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){      /*노랑색*/
+  stroke: #FFF300;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){      /*흰색*/
+  stroke: #ffffff;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){      /*흰색*/
+  stroke: #ffffff;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){      /*빨간색*/
+  stroke: #FF0500;
+  animation-delay: -5s;
+}
+
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+
+
+/*=======================================================================================*/
+/*메뉴 바*/
+ul {
+  list-style-type: none;
+  margin: 0;              /*외부 여백 0px*/
+  padding: 0;             /*내부 여백 0px*/
+  overflow: hidden;       /*화면에서 넘어가는 부분은 자름*/
+  background-color: #333; /*배경색 지정*/
+}
+
+li {
+  font-size: 0.7em;       /*글자 크기 0.7*/
+  float: center;          /*가운데 정렬*/
+  display: inline-block;  /*인라인 블록으로 설정*/
+}
+
+li a {
+  display: inline-block;  /*인라인 블록으로 설정*/
+  color: white;           /*글자색 흰색*/
+  text-align: center;     /*글자 가운데 정렬*/
+  padding: 14px 16px;     /*내부 좌우 여백 14, 상하 여백 16*/
+  text-decoration: none;  /*밑줄 없앰*/
+}
+
+li a:hover {             /*li와 a 태그위에 마우스 올릴때*/
+  background-color: red; /*배경색 빨간색*/
+}
